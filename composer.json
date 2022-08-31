@@ -1,9 +1,11 @@
 {
     "name": "creativestyle/magesuite-catalog-product-listing-compatibility",
     "description": "Module extends catalog product listing and related widgets, to allow choosing MageSuite products carousel as listing template",
-    "homepage": "https://creativestyle.de",
-    "license": "OSL-3.0",
     "type": "magento2-module",
+    "license": [
+      "OSL-3.0",
+      "AFL-3.0"
+    ],
     "autoload": {
       "files": [
         "registration.php"
