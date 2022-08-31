@@ -1,4 +1,3 @@
-console.log("TEST")
 define([
     'ko',
     'jquery',
