@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="catalog_recently_viewed" class="Magento\Catalog\Block\Widget\RecentlyViewed">
+        <parameters>
+            <parameter name="template" xsi:type="select" required="true" visible="true">
+                <options>
+                    <option name="magesuite-products-carousel" value="MageSuite_CatalogProductListingCompatibility::product/widget/viewed/magesuite-products-carousel.phtml">
+                        <label translate="true">Viewed Products MageSuite Products Carousel Template</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+    <widget id="catalog_recently_compared" class="Magento\Catalog\Block\Widget\RecentlyCompared">
+        <parameters>
+            <parameter name="template" xsi:type="select" required="true" visible="true">
+                <options>
+                    <option name="magesuite-products-carousel" value="MageSuite_CatalogProductListingCompatibility::product/widget/compared/magesuite-products-carousel.phtml">
+                        <label translate="true">Compared Products MageSuite Products Carousel Template</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
+

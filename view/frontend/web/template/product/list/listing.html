@@ -1,0 +1,64 @@
+<!--
+/**
+ * Template overwritten to support magesuite products carousel view for product listings
+ * Such products listing can be used for example in recently viewed/compared products widget.
+ * Aligned with Magento 2.4.4 at 08/2022
+ */
+-->
+<div if="hasData()" class="block" css="additionalClasses">
+    <div class="cs-container cs-container--headline">
+        <div class="cs-container__inner">
+            <div class="cs-headline ">
+                <div class="cs-headline__title" text="label"></div>
+            </div>
+        </div>
+    </div>
+    <div class="block-content">
+        <div css="'products-' + displayMode">
+            <!-- ko if: displayAsMagesuiteCarousel && carouselMarkup -->
+                <div data-bind="html: carouselMarkup"></div>
+            <!-- /ko -->
+            <!-- ko ifnot: displayAsMagesuiteCarousel -->
+                <ol class="product-items">
+                    <li class="product-item" repeat="foreach: filteredRows, item: '$row'">
+                        <div class="product-item-info">
+                            <fastForEach args="data: getRegion('general-area'), as: '$col'" >
+                                <render args="$col.getBody()"></render>
+                            </fastForEach>
+
+                            <div class="product-item-details">
+                                <fastForEach args="data: getRegion('details-area'), as: '$col'" >
+                                    <render args="$col.getBody()"></render>
+                                </fastForEach>
+
+                                <div if="regionHasElements('action-primary-area') || regionHasElements('action-secondary-area')"
+                                    class="product-item-actions">
+                                    <div class="actions-primary" if="regionHasElements('action-primary-area')">
+                                        <fastForEach args="data: getRegion('action-primary-area'), as: '$col'" >
+                                            <render args="$col.getBody()"></render>
+                                        </fastForEach>
+                                    </div>
+
+                                    <div if="regionHasElements('action-secondary-area')"
+                                        class="actions-secondary"
+                                        data-role="add-to-links">
+                                        <fastForEach args="data: getRegion('action-secondary-area'), as: '$col'" >
+                                            <render args="$col.getBody()"></render>
+                                        </fastForEach>
+                                    </div>
+                                </div>
+
+                                <div if="regionHasElements('description-area')"
+                                    class="product-item-description">
+                                    <fastForEach args="data: getRegion('description-area'), as: '$col'" >
+                                        <render args="$col.getBody()"></render>
+                                    </fastForEach>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>

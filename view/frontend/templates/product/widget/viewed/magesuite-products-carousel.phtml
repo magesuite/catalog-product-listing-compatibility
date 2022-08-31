@@ -1,0 +1,21 @@
+<?php
+/**
+ * Custom template to support MageSuite products carousel as widget's template.
+ * Check related products listing mixin: /Magento_Catalog/web/js/product/list/listing-carousel-ext.js
+ */
+?>
+<?php
+// phpcs:disable Magento2.Security.LanguageConstruct.DirectOutput
+// phpcs:disable Magento2.PHP.ShortEchoSyntax.ShortEchoTag
+
+/** @var $block \Magento\Ui\Block\Wrapper */
+?>
+<?php /* @noEscape */ echo $block->renderApp([
+    'widget_columns' => [
+        'displayMode' => 'grid',
+        'displayAsMagesuiteCarousel' => true
+    ],
+    'image' => [
+        'imageCode' => 'recently_viewed_products_grid_content_widget'
+    ]
+]);
