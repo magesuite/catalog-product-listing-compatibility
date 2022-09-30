@@ -23,9 +23,6 @@ define([
             initializeMagesuiteCarousel: function () {
                 const productIds = [];
                 this.filteredRows.subscribe((value) => {
-                    if (this.additionalClasses === "widget block-compared-products-grid") {
-                        console.log(value);
-                    }
                     if (value.length && !this.magesuiteCarouselInitialized) {
                         this.magesuiteCarouselInitialized = true;
                         value.map(function(product){

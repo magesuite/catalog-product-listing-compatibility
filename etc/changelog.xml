@@ -7,6 +7,12 @@
                     <overview>Initialized the module</overview>
                 </entry>
             </tag>
+            <tag version="1.0.1" date="2022-09-30">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fixed template paths and console.logs</overview>
+                </entry>
+            </tag>
         </changelog>
     </module>
 </config>
