@@ -13,6 +13,13 @@
                     <overview>Fixed template paths and console.logs</overview>
                 </entry>
             </tag>
+            <tag version="1.0.2" date="2023-03-27">
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Initialize dailydeal on tiles in carouseles rendered dynamically</overview>
+                    <ticket_id>TOYS-674</ticket_id>
+                </entry>
+            </tag>
         </changelog>
     </module>
 </config>

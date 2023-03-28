@@ -22,6 +22,7 @@ define([
 
             initializeMagesuiteCarousel: function () {
                 const productIds = [];
+                const targetContainerSelector = ("." + (this.additionalClasses).split(' ').join('.'));
                 this.filteredRows.subscribe((value) => {
                     if (value.length && !this.magesuiteCarouselInitialized) {
                         this.magesuiteCarouselInitialized = true;
@@ -34,6 +35,7 @@ define([
                         }).then(({ content }) => {
                             this.carouselMarkup(content);
                             mage.apply();
+                            $(targetContainerSelector).trigger('contentUpdated');
                         });
                     }
                 });
