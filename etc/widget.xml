@@ -5,12 +5,17 @@
         <parameters>
             <parameter name="template" xsi:type="select" required="true" visible="true">
                 <options>
-                    <option name="magesuite-products-carousel" value="MageSuite_CatalogProductListingCompatibility::product/widget/viewed/magesuite-products-carousel.phtml">
+                    <option name="magesuite-products-carousel" value="MageSuite_CatalogProductListingCompatibility::product/widget/viewed/magesuite-products-carousel.phtml" selected="true">
                         <label translate="true">Viewed Products MageSuite Products Carousel Template</label>
                     </option>
                 </options>
             </parameter>
         </parameters>
+        <containers>
+            <container name="content">
+                <template name="magesuite-products-carousel" value="magesuite-products-carousel" />
+            </container>
+        </containers>
     </widget>
     <widget id="catalog_recently_compared" class="Magento\Catalog\Block\Widget\RecentlyCompared">
         <parameters>
@@ -22,6 +27,11 @@
                 </options>
             </parameter>
         </parameters>
+        <containers>
+            <container name="content">
+                <template name="magesuite-products-carousel" value="magesuite-products-carousel" />
+            </container>
+        </containers>
     </widget>
 </widgets>
 
