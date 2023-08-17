@@ -1,0 +1,51 @@
+<?php
+/**
+ * Custom template to support MageSuite products grid as widget's template.
+ */
+
+/** @var \Magento\CatalogWidget\Block\Product\ProductsList $block */
+
+// phpcs:disable Generic.Files.LineLength.TooLong
+// phpcs:disable Magento2.Templates.ThisInTemplate.FoundHelper
+?>
+<?php if ($exist = ($block->getProductCollection() && $block->getProductCollection()->getSize())) : ?>
+    <?php if ($block->getTitle()) : ?>
+        <?= /* @noEscape */ $block->getLayout()->createBlock(
+            \MageSuite\ContentConstructorFrontend\Block\Component::class,
+            'carousels-headline-product-carousel' . uniqid(),
+            [
+                'data' => [
+                    'section' => 'content',
+                    'type' => 'headline',
+                    'data' => [
+                        'title' => __($block->getTitle()),
+                        'container_mix' => '-widget cs-container--headline'
+                    ]
+                ],
+            ]
+        )->toHtml(); ?>
+    <?php endif ?>
+
+    <?php
+    $items = $block->getProductCollection()->getItems();
+    $productsId = [];
+
+    foreach ($items as $item) {
+        $productsId[] = $item->getEntityId();
+    }
+    ?>
+    <?= /* @noEscape */ $block->getLayout()->createBlock(
+        \MageSuite\ContentConstructorFrontend\Block\Component::class,
+        '',
+        [
+            'data' => [
+                'type' => 'product-grid',
+                'data' => [
+                    'product_ids' => $productsId,
+                    'container_mix' => '-widget'
+                ]
+            ]
+        ]
+    )->toHtml();
+    ?>
+<?php endif;?>

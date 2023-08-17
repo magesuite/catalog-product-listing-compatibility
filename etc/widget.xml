@@ -33,4 +33,21 @@
             </container>
         </containers>
     </widget>
+    <widget id="products_list">
+        <parameters>
+            <parameter name="template" xsi:type="select" required="true" visible="true">
+                <options>
+                    <option name="mgs_carousel" value="MageSuite_CatalogProductListingCompatibility::product/widget/content/carousel.phtml">
+                        <label translate="true">Magesuite Carousel</label>
+                    </option>
+                    <option name="mgs_grid" value="MageSuite_CatalogProductListingCompatibility::product/widget/content/grid.phtml">
+                        <label translate="true">Magesuite Grid</label>
+                    </option>
+                    <option name="mgs_product_teaser" value="MageSuite_CatalogProductListingCompatibility::product/widget/content/product-teaser.phtml">
+                        <label translate="true">Magesuite Product Teaser</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
 </widgets>
