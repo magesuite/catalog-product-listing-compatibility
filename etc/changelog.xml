@@ -32,6 +32,15 @@
                     <overview>Extends Catalog Products List widget with carousel, grid and product-teaser templates.</overview>
                 </entry>
             </tag>
+            <tag version="1.1.1" date="2024-05-17">
+                <entry>
+                    <type>FEAT</type>
+                    <overview>
+                        Extends Catalog Products List widget with carousel and grid templates in Content/Widgets.
+                        Catalog Products List: add possibility to set number of rows for mobile/tablet/desktop devices.
+                    </overview>
+                </entry>
+            </tag>
         </changelog>
     </module>
 </config>
