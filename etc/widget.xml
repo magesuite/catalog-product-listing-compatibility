@@ -33,7 +33,7 @@
             </container>
         </containers>
     </widget>
-    <widget id="products_list">
+    <widget id="products_list" class="Magento\CatalogWidget\Block\Product\ProductsList">
         <parameters>
             <parameter name="template" xsi:type="select" required="true" visible="true">
                 <options>
@@ -48,6 +48,35 @@
                     </option>
                 </options>
             </parameter>
+            <parameter name="grid_rows_mobile" xsi:type="text" required="true" visible="true">
+                <label translate="true">Grid Rows Mobile</label>
+                <description translate="true">Number of rows on mobile devices</description>
+                <value>1</value>
+            </parameter>
+            <parameter name="grid_rows_tablet" xsi:type="text" required="true" visible="true">
+                <label translate="true">Grid Rows Tablet</label>
+                <description translate="true">Number of rows on tablet devices</description>
+                <value>2</value>
+            </parameter>
+            <parameter name="grid_rows_desktop" xsi:type="text" required="true" visible="true">
+                <label translate="true">Grid Rows Desktop</label>
+                <description translate="true">Number of rows on desktop devices</description>
+                <value>2</value>
+            </parameter>
         </parameters>
+        <containers>
+            <container name="content">
+                <template name="mgs_carousel" value="mgs_carousel" />
+                <template name="mgs_grid" value="mgs_grid" />
+            </container>
+            <container name="content.top">
+                <template name="mgs_carousel" value="mgs_carousel" />
+                <template name="mgs_grid" value="mgs_grid" />
+            </container>
+            <container name="content.bottom">
+                <template name="mgs_carousel" value="mgs_carousel" />
+                <template name="mgs_grid" value="mgs_grid" />
+            </container>
+        </containers>
     </widget>
 </widgets>

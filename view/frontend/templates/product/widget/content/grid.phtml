@@ -42,7 +42,10 @@
                 'type' => 'product-grid',
                 'data' => [
                     'product_ids' => $productsId,
-                    'container_mix' => '-widget'
+                    'container_mix' => '-widget',
+                    'rows_mobile' => $block->getGridRowsMobile() ?? 1,
+                    'rows_tablet' => $block->getGridRowsTablet() ?? 2,
+                    'rows_desktop' => $block->getGridRowsDesktop() ?? 2,
                 ]
             ]
         ]
