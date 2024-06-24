@@ -2,7 +2,8 @@ define([
     'ko',
     'jquery',
     'mage/apply/main',
-], function (ko, $, mage) {
+    'mage/cookies'
+], function (ko, $, mage, cookies) {
     return function (Listing) {
         return Listing.extend({
             defaults: {
@@ -34,8 +35,12 @@ define([
                             id: productIds,
                         }).then(({ content }) => {
                             this.carouselMarkup(content);
+                            // Initialize js components for injected content and refresh form_key
                             mage.apply();
-                            $(targetContainerSelector).trigger('contentUpdated');
+                            $(targetContainerSelector)
+                                .trigger('contentUpdated')
+                                .find('input[name="form_key"]')
+                                .val($.mage.cookies.get('form_key'));
                         });
                     }
                 });

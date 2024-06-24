@@ -41,6 +41,13 @@
                     </overview>
                 </entry>
             </tag>
+            <tag version="1.1.2" date="2024-06-24">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Refresh the form_key for add to cart on dynamically rendered carousel.</overview>
+                    <ticket_id>MGS-5291</ticket_id>
+                </entry>
+            </tag>
         </changelog>
     </module>
 </config>
